@@ -5,5 +5,7 @@ jobs:
   ciao:
     runs-on: ubuntu-latest
     steps:
-      - run: mvn install
+      - run: |
+        cd javademo/my-app
+        mvn install
       - run: echo "lesgoski"
