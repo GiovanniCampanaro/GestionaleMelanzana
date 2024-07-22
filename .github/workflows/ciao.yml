@@ -5,4 +5,5 @@ jobs:
   ciao:
     runs-on: ubuntu-latest
     steps:
+      - run: mvn install
       - run: echo "lesgoski"
