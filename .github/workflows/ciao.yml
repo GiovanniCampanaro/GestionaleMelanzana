@@ -18,6 +18,7 @@ jobs:
           ls -la
           cd javademo/my-app
           mvn install
+      - run: mvn test
       - run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
         working-directory: javademo/my-app
       - uses: actions/upload-artifact@v4
@@ -30,3 +31,8 @@ jobs:
           # Required.
           path: javademo/my-app/target/my-app-1.0-SNAPSHOT.jar
       - run: echo "ho finito"
+jobs:
+  test-automatizzati:
+    runs-on: ubuntu-latest
+    steps:
+      - run: mvn test
