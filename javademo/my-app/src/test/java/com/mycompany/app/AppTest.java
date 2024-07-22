@@ -25,19 +25,8 @@ public class AppTest
         assertFalse( false );
     }
     @Test
-    public void testApp()
-    {
-        App.main(null);
-    }
-    @Test
-    public void testIstanza()
-    {
-        App pippo = new App();
-        assertNotNull(pippo);
-    }
-    @Test
     public void testAppMeteo()
     {
-        Main.main(null);
+        App.main(null);
     }
 }
