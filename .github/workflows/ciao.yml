@@ -5,6 +5,7 @@ jobs:
   ciao:
     runs-on: ubuntu-latest
     steps:
+      - run: mvn -v
       - uses: actions/checkout@v4
       - run: |
           ls -la
@@ -14,6 +15,7 @@ jobs:
   verifica-cartella:
     runs-on: ubuntu-latest
     steps:
+      - run: mvn -v
       - uses: actions/checkout@v4
       - run: |
           ls -la
