@@ -20,18 +20,3 @@ jobs:
       - run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
         working-directory: javademo/my-app
       - run: echo "lesgoski"
-  verifica-cartella:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up JDK for x64
-        # https://github.com/actions/setup-java
-        uses: actions/setup-java@v4
-        with:
-          java-version: '21.0.3'
-          distribution: 'temurin'
-      - run: mvn -v
-      - uses: actions/checkout@v4
-      - run: |
-          ls -la
-      - run: echo "verifica cartella"
-      - run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
