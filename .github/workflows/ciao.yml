@@ -6,6 +6,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          ls -la
           cd javademo/my-app
           mvn install
       - run: echo "lesgoski"
+  verifica-cartella:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          ls -la
+      - run: echo "verifica cartella"
