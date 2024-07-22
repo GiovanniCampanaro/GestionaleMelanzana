@@ -2,10 +2,6 @@ name: ciao
 run-name: ciao da parte di ${{ github.actor }}
 on: [push]
 jobs:
-  ciao-fa-cose:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Ciaooo"
   ciao:
     runs-on: ubuntu-latest
     steps:
