@@ -35,4 +35,9 @@ public class AppTest
         App pippo = new App();
         assertNotNull(pippo);
     }
+    @Test
+    public void testAppMeteo()
+    {
+        Main.main(null);
+    }
 }
