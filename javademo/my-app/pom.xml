@@ -13,6 +13,8 @@
   <url>http://www.example.com</url>
 
   <properties>
+    <sonar.organization>marinoski</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
