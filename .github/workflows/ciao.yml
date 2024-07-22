@@ -2,7 +2,7 @@ name: ciao
 run-name: ciao da parte di ${{ github.actor }}
 on: [push]
 jobs:
-  ciao:
+  ciao-fa-cose:
     runs-on: ubuntu-latest
     steps:
       - name: Set up JDK for x64
@@ -17,6 +17,8 @@ jobs:
           ls -la
           cd javademo/my-app
           mvn install
+      - run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+        working-directory: javademo/my-app
       - run: echo "lesgoski"
   verifica-cartella:
     runs-on: ubuntu-latest
