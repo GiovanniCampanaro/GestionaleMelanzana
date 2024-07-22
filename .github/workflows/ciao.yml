@@ -32,7 +32,6 @@ jobs:
           # Required.
           path: javademo/my-app/target/my-app-1.0-SNAPSHOT.jar
       - run: echo "ho finito"
-jobs:
   test-automatizzati:
     runs-on: ubuntu-latest
     steps:
