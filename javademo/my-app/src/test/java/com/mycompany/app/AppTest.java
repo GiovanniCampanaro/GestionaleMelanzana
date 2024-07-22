@@ -3,7 +3,6 @@ package com.mycompany.app;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
-
 import org.junit.Test;
 
 /**
@@ -23,5 +22,15 @@ public class AppTest
     public void shouldAnswerWithFalse()
     {
         assertFalse( false );
+    }
+    @Test
+    public void testApp()
+    {
+        App.main(null);
+    }
+    @Test
+    public void testIstanza()
+    {
+        new App();
     }
 }
