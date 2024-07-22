@@ -5,6 +5,7 @@ jobs:
   ciao-fa-cose:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "sto iniziando"
       - name: Set up JDK for x64
         # https://github.com/actions/setup-java
         uses: actions/setup-java@v4
@@ -19,4 +20,13 @@ jobs:
           mvn install
       - run: java -cp target/my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
         working-directory: javademo/my-app
-      - run: echo "lesgoski"
+      - uses: actions/upload-artifact@v4
+        with:
+          # Name of the artifact to upload.
+          # Optional. Default is 'artifact'
+          name: my-app-1.0-SNAPSHOT.jar
+
+          # A file, directory or wildcard pattern that describes what to upload
+          # Required.
+          path: javademo/my-app/target/my-app-1.0-SNAPSHOT.jar
+      - run: echo "ho finito"
