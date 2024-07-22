@@ -5,6 +5,7 @@ jobs:
   ciao:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
           ls -la
           cd javademo/my-app
@@ -13,6 +14,7 @@ jobs:
   verifica-cartella:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: |
           ls -la
       - run: echo "verifica cartella"
